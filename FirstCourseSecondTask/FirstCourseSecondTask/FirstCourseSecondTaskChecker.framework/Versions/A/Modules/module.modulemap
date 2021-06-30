@@ -1,0 +1,11 @@
+framework module FirstCourseSecondTaskChecker {
+  umbrella header "FirstCourseSecondTaskChecker.h"
+
+  export *
+  module * { export * }
+}
+
+module FirstCourseSecondTaskChecker.Swift {
+    header "FirstCourseSecondTaskChecker-Swift.h"
+    requires objc
+}
