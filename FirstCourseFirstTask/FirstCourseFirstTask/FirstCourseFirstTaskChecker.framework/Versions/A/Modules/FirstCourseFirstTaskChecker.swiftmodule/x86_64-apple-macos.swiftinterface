@@ -1,0 +1,25 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-module-flags: -target x86_64-apple-macos10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FirstCourseFirstTaskChecker
+@_exported import FirstCourseFirstTaskChecker
+import Foundation
+import Swift
+public class Checker {
+  public init()
+  public func checkFirstFunction(function: () -> Swift.String)
+  public func checkSecondFunction(function: (Swift.String, Swift.String) -> Swift.Int)
+  public enum Currency {
+    case rub
+    case eur
+    case usd
+    public static func == (a: FirstCourseFirstTaskChecker.Checker.Currency, b: FirstCourseFirstTaskChecker.Checker.Currency) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func checkThirdFunction(function: (FirstCourseFirstTaskChecker.Checker.Currency, Swift.Int) -> Swift.String)
+  @objc deinit
+}
+extension FirstCourseFirstTaskChecker.Checker.Currency : Swift.Equatable {}
+extension FirstCourseFirstTaskChecker.Checker.Currency : Swift.Hashable {}
